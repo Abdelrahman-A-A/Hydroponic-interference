@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="fields"> 
+        <div class="container">
+            <div class="input water">
+                <label for="" >Water level</label>
+                <input type="text" name="" id="" readonly value="93%">
+            </div>
+            <div class="input ph">
+                <label for="">PH level</label>
+                <input type="text" name="" id="" readonly value="5.7">
+            </div>
+            <div class="input Nutrition">
+                <label for="">Nutrition</label>
+                <input type="text" name="" id="" readonly value="Normal">
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <div class="container">
+            <button>EMERGENCY STOP</button>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttonDiv = document.querySelector(".button");
+            buttonDiv.addEventListener("click", function () {
+                const result = confirm("Do you want to stop?");
+                if (result) {
+                    alert("machine has stopped");
+                } else {
+                    alert("opperation cancelled");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
